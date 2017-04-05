@@ -11,13 +11,14 @@ const CreateUserView = ({data, mutate}) => {
 			<input id='lastname' placeholder='lastname'/>
 			<input id='email' placeholder='email'/>
 			<input id='accountids' placeholder='account ids'/>
-			<button onClick={
-				() => mutate({
-					variables: {
-						new_user: buildNewUser()
-					}
-				})
-			}>Create User!</button>
+			<button onClick={() => {
+				console.log('new user');
+				mutate({
+				variables: {
+					new_user: buildNewUser()
+				}
+			})
+		}}>Create User!</button>
 		</div>
 	);
 };
